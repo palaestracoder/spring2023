@@ -1,5 +1,3 @@
-import r from 'readline'
-
-r.
-var name = readline.cons
-console.log("hello ${name}")
+const prompt = require("prompt-sync")()
+const name = prompt("What is your favorite color? ")
+console.log(name)
