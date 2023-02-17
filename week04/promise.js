@@ -1,8 +1,12 @@
-const getData = new Promise((resolve, reject) => {
+const getData = new Promise(
+  
+  (resolve, reject) => {
     setTimeout(() => {
       resolve('Data has been resolved');
     }, 3000);
-  });
+  }
+  
+  );
   
   getData.then(data => {
     console.log(data);

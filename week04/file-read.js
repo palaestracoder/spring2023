@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-fs.readFile(__dirname + '\\file.txt', 'utf-8', function(error, data) {
+fs.readFile(__dirname + '\\filex.txt', 'utf-8', function(error, data) {
   if (error) {
     console.error(error);
   } else {
