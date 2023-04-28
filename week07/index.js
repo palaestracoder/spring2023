@@ -8,8 +8,6 @@ const db = redis.createClient({
 })
 await db.connect()
 
-app.use(express.static('palaestracoder/spring2023/week07/public'))
-
 app.get('/inc', async(req, res) => {
     const count = await db.incr("count")
     res.send(`count: ${count}`)
@@ -22,17 +20,6 @@ app.get('/dec', async(req, res) => {
 
 app.get('/echo/:value', (req, res) => {
     res.send(req.params)
-})
-
-app.get('/save/:number', async (req, res) => {
-    await db.set("thenumber", req.params.number)
-    await db.
-    res.send("OK")
-})
-
-app.get('/showme', async (req, res) => {
-    const number = await db.get("thenumber")
-    res.send(`<!DOCTYPE html><html><body>${number}</body></html>`)
 })
 
 
